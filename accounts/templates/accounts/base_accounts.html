@@ -6,10 +6,12 @@
     {# GRUNT_DJANGO_COMPRESSOR JS #}
     {% if DEBUG %}
     <!--SCRIPTS-->
+    <script type="text/javascript" src="{% static 'bower_components/underscore/underscore.js' %}"></script>
     <script type="text/javascript" src="{% static 'bower_components/backbone/backbone.js' %}"></script>
+    <script type="text/javascript" src="{% static 'accounts/js/accounts.js' %}"></script>
     <!--SCRIPTS END-->
     {% else %}
-    <script type="text/javascript" src="{% static 'dist/products.index.js' %}?version=502d7a918dc86424334ac6cbbd885a6d"></script>
+    <script type="text/javascript" src="{% static 'dist/accounts.base_accounts.js' %}?version=b0ccd0ce0988599d10f162d91ca066c2"></script>
     {% endif %}
     {# GRUNT_DJANGO_COMPRESSOR JS END #}
 {% endblock %}

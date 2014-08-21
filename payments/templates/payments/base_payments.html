@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block javascript %}
+    {# GRUNT_DJANGO_COMPRESSOR JS #}
+    {% if DEBUG %}
+    <!--SCRIPTS-->
+    <script type="text/javascript" src="{% static 'bower_components/underscore/underscore.js' %}"></script>
+    <script type="text/javascript" src="{% static 'payments/js/payments.js' %}"></script>
+    <!--SCRIPTS END-->
+    {% else %}
+    <script type="text/javascript" src="{% static 'dist/payments.base_payments.js' %}?version=6d569e0438bb9a7713d5cc324e91b48b"></script>
+    {% endif %}
+    {# GRUNT_DJANGO_COMPRESSOR JS END #}
+{% endblock %}

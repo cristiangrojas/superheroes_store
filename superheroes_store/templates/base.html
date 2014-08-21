@@ -5,6 +5,15 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>SuperHeroes Store | A grunt-django-compressor Django app for testing</title>
+    {# GRUNT_DJANGO_COMPRESSOR CSS #}
+    {% if DEBUG %}
+    <!--STYLES-->
+    <link rel="stylesheet" type="text/css" href="{% static 'bower_components/bootstrap/dist/css/bootstrap.css' %}">
+    <!--STYLES END-->
+    {% else %}
+    <link rel="stylesheet" type="text/css" href="{% static 'dist/superheroes_store.base.css' %}?version=f84c05f42bf17eb29cae2d5656893887">
+    {% endif %}
+    {# GRUNT_DJANGO_COMPRESSOR CSS END #}
 </head>
 <body>
 <header>
@@ -12,5 +21,19 @@
         <h1>SuperHeroes Store - A grunt-django-compressor Django app for testing</h1>
     </div>
 </header>
+
+{# GRUNT_DJANGO_COMPRESSOR JS #}
+{% if DEBUG %}
+<!--SCRIPTS-->
+<script type="text/javascript" src="{% static 'bower_components/jquery/dist/jquery.js' %}"></script>
+<script type="text/javascript" src="{% static 'bower_components/bootstrap/dist/js/bootstrap.js' %}"></script>
+<!--SCRIPTS END-->
+{% else %}
+<script type="text/javascript" src="{% static 'dist/superheroes_store.base.js' %}?version=25b6c0cde15510ab5cab891e69cc143d"></script>
+{% endif %}
+{# GRUNT_DJANGO_COMPRESSOR JS END #}
+
+{% block javascript %}{% endblock %}
+
 </body>
 </html>
