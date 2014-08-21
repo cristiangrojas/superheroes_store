@@ -7,15 +7,15 @@
     <title>SuperHeroes Store | A grunt-django-compressor Django app for testing</title>
 
     {# GRUNT_DJANGO_COMPRESSOR CSS #}
-        {% if DEBUG %}
-        <!--STYLES-->
-        <link rel="stylesheet" type="text/css" href="{% static 'bower_components/bootstrap/dist/css/bootstrap.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
-        <!--STYLES END-->
-        {% else %}
-        <link rel="stylesheet" type="text/css" href="{% static 'dist/superheroes_store.base.css' %}?version=b9c70525ca567b1dc5e36c42a72d64c2">
-        {% endif %}
-        {# GRUNT_DJANGO_COMPRESSOR CSS END #}
+    {% if DEBUG %}
+    <!--STYLES-->
+    <link rel="stylesheet" type="text/css" href="{% static 'bower_components/bootstrap/dist/css/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <!--STYLES END-->
+    {% else %}
+    <link rel="stylesheet" type="text/css" href="{% static 'dist/superheroes_store.base.css' %}?version=b9c70525ca567b1dc5e36c42a72d64c2">
+    {% endif %}
+    {# GRUNT_DJANGO_COMPRESSOR CSS END #}
 
     {% block stylesheets %}{% endblock %}
 
@@ -40,18 +40,6 @@
                 <ul class="nav navbar-nav">
                     <li class="{% block nav_home_active %}{% endblock %}"><a href="{% url 'home' %}">Home</a></li>
                     <li class="{% block nav_accounts_active %}{% endblock %}"><a href="{% url 'accounts:index' %}">Accounts</a></li>
-                    {% comment %}<li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">One more separated link</a></li>
-                        </ul>
-                    </li>{% endcomment %}
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -64,15 +52,15 @@
 </main>
 
 {# GRUNT_DJANGO_COMPRESSOR JS #}
-    {% if DEBUG %}
-    <!--SCRIPTS-->
-    <script type="text/javascript" src="{% static 'bower_components/jquery/dist/jquery.js' %}"></script>
-    <script type="text/javascript" src="{% static 'bower_components/bootstrap/dist/js/bootstrap.js' %}"></script>
-    <!--SCRIPTS END-->
-    {% else %}
-    <script type="text/javascript" src="{% static 'dist/superheroes_store.base.js' %}?version=25b6c0cde15510ab5cab891e69cc143d"></script>
-    {% endif %}
-    {# GRUNT_DJANGO_COMPRESSOR JS END #}
+{% if DEBUG %}
+<!--SCRIPTS-->
+<script type="text/javascript" src="{% static 'bower_components/jquery/dist/jquery.js' %}"></script>
+<script type="text/javascript" src="{% static 'bower_components/bootstrap/dist/js/bootstrap.js' %}"></script>
+<!--SCRIPTS END-->
+{% else %}
+<script type="text/javascript" src="{% static 'dist/superheroes_store.base.js' %}?version=25b6c0cde15510ab5cab891e69cc143d"></script>
+{% endif %}
+{# GRUNT_DJANGO_COMPRESSOR JS END #}
 
 {% block javascript %}{% endblock %}
 
