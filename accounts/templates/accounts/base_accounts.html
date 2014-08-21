@@ -2,6 +2,24 @@
 
 {% load staticfiles %}
 
+{% block stylesheets %}
+    {# GRUNT_DJANGO_COMPRESSOR CSS #}
+    {% if DEBUG %}
+    <!--STYLES-->
+    <link rel="stylesheet" type="text/css" href="{% static 'accounts/css/accounts.css' %}">
+    <!--STYLES END-->
+    {% else %}
+    <link rel="stylesheet" type="text/css" href="{% static 'dist/accounts.base_accounts.css' %}?version=9a9633cab02762fd603fe86e6824e9c3">
+    {% endif %}
+    {# GRUNT_DJANGO_COMPRESSOR CSS END #}
+{% endblock %}
+
+{% block nav_accounts_active %}active{% endblock %}
+
+{% block content %}
+    <h1>You're in accounts</h1>
+{% endblock %}
+
 {% block javascript %}
     {# GRUNT_DJANGO_COMPRESSOR JS #}
     {% if DEBUG %}
