@@ -1,0 +1,17 @@
+{
+  "name": "superheroes_store",
+  "version": "0.0.0",
+  "authors": [
+    "Cristian Rojas <cristianguillermorojas@gmail.com>"
+  ],
+  "description": "A grunt-django-compressor Django app for testing",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

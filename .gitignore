@@ -1,0 +1,9 @@
+*.pyc
+*.idea
+*.DS_Store
+superheroes_store/generated
+superheroes_store/media
+superheroes_store/static/bower_components
+*gitignored*
+node_modules/
+grunt_django_compressor_versions.json
