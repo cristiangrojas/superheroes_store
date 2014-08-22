@@ -2,6 +2,7 @@
   "name": "superheroes_store",
   "version": "0.1.0",
   "devDependencies": {
-    "grunt": "^0.4.5"
+    "grunt": "^0.4.5",
+    "grunt-django-compressor": "0.2.5"
   }
 }

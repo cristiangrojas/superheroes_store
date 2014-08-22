@@ -20,8 +20,7 @@ module.exports = function(grunt){
           excludedDirs: [
             'node_modules/'
           ],
-          generateJsSourceMaps: true,
-          amazonS3BucketURL: ''
+          generateJsSourceMaps: true
         }
       }
     }
